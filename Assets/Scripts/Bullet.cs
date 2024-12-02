@@ -17,14 +17,15 @@ public class Bullet : MonoBehaviour
         
     }
 
-    void Update() 
+    void Update()
     {
         transform.position += transform.right * speed * Time.deltaTime;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject == ownerPlayer) {
+        if(collision.gameObject == ownerPlayer)
+        {
             Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
             return;
         }
@@ -37,6 +38,6 @@ public class Bullet : MonoBehaviour
         }
 
         gameObject.SetActive(false);
-        Destroy(this); 
+        Destroy(this);
     }
 }

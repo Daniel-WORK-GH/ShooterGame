@@ -39,44 +39,47 @@ public class Player : MonoBehaviour
 
 
     private float elpshoot;
-    private const float shoottime = 0.5f; //sec
-    
+    private const float shoottime = 0.5f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         gun = this.transform.GetChild(0).gameObject;
-
         float randomRotation = Random.Range(0f, 360f);
-
         transform.rotation = Quaternion.Euler(0f, 0f, randomRotation);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(left)){
+        if (Input.GetKey(left))
+        {
             transform.position += Vector3.left * speed * Time.deltaTime;
         }
-        if (Input.GetKey(right)){
+        if (Input.GetKey(right))
+        {
             transform.position += Vector3.right* speed * Time.deltaTime;
         }
-        if (Input.GetKey(up)){
+        if (Input.GetKey(up))
+        {
             transform.position += Vector3.up * speed * Time.deltaTime;
         }
-        if (Input.GetKey(down)){
+        if (Input.GetKey(down))
+        {
             transform.position += Vector3.down * speed * Time.deltaTime;
         }
 
-        if(Input.GetKey(rotatecw)){
+        if(Input.GetKey(rotatecw))
+        {
             this.transform.Rotate(new Vector3(0, 0, rotatespeed));
         }
-        if(Input.GetKey(rotateacw)){
+        if(Input.GetKey(rotateacw))
+        {
             this.transform.Rotate(new Vector3(0, 0, -rotatespeed));
         }
 
-        if(Input.GetKeyDown(shoot)){
-            if(elpshoot > shoottime){
+        if(Input.GetKeyDown(shoot))
+        {
+            if(elpshoot > shoottime)
+            {
                 GameObject obj = Instantiate(bulletPrefab, gun.transform.position, gun.transform.rotation);
                 Bullet bullet = obj.GetComponent<Bullet>();
                 bullet.ownerPlayer = gameObject;

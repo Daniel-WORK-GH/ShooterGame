@@ -71,6 +71,5 @@ public class Startup : MonoBehaviour
         rectTransform.anchoredPosition = Vector2.zero; // Center in the Canvas
 
         Debug.Log(messageObj);
-
     }
 }
