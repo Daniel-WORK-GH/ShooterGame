@@ -61,7 +61,7 @@ public class Startup : MonoBehaviour
 
         // Instantiate the Text object on the Canvas
         GameObject messageObj = Instantiate(winMessagePrefab, canvas.transform);
-        
+
         // Set text content
         TextMeshProUGUI tmpText = messageObj.GetComponent<TextMeshProUGUI>();
         tmpText.text = msg;
