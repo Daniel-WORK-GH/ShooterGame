@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Bullet : MonoBehaviour
-{    
+{
     [Header("Bullet Settings")]
     [Tooltip("The bullet speed")]
     public float speed = 35;

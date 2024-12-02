@@ -36,7 +36,6 @@ public class Startup : MonoBehaviour
         Debug.Log(p2spawn.transform.position);
     }
 
-    
     public void Reset(string msg)
     {
         ShowWinMessage(msg);
