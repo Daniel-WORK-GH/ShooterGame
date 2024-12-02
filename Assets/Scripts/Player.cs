@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKey(right))
         {
-            transform.position += Vector3.right* speed * Time.deltaTime;
+            transform.position += Vector3.right * speed * Time.deltaTime;
         }
         if (Input.GetKey(up))
         {
@@ -67,18 +67,18 @@ public class Player : MonoBehaviour
             transform.position += Vector3.down * speed * Time.deltaTime;
         }
 
-        if(Input.GetKey(rotatecw))
+        if (Input.GetKey(rotatecw))
         {
             this.transform.Rotate(new Vector3(0, 0, rotatespeed));
         }
-        if(Input.GetKey(rotateacw))
+        if (Input.GetKey(rotateacw))
         {
             this.transform.Rotate(new Vector3(0, 0, -rotatespeed));
         }
 
-        if(Input.GetKeyDown(shoot))
+        if (Input.GetKeyDown(shoot))
         {
-            if(elpshoot > shoottime)
+            if (elpshoot > shoottime)
             {
                 GameObject obj = Instantiate(bulletPrefab, gun.transform.position, gun.transform.rotation);
                 Bullet bullet = obj.GetComponent<Bullet>();
@@ -92,7 +92,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Bullet")
+        if (collision.gameObject.tag == "Bullet")
         {
             Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
         }

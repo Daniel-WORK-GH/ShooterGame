@@ -24,12 +24,12 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject == ownerPlayer)
+        if (collision.gameObject == ownerPlayer)
         {
             Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
             return;
         }
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             Destroy(collision.gameObject);
 
