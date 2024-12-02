@@ -5,7 +5,7 @@ public class ScreenSizeKeeper : MonoBehaviour
     [SerializeField]
     private Camera cam;
 
-    private readonly Vector2 targetAspectRatio = new Vector2(16, 9);
+    private readonly Vector2 targetAspectRatio = new Vector2(21, 10);
     private readonly Vector2 rectCenter = new Vector2(0.5f, 0.5f);
 
     private Vector2 lastResolution;
