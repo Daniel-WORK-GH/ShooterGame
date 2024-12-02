@@ -1,6 +1,8 @@
 # Shooter Game 
 Two player, controller by one keyboard, fight to death.
 
+### Itch.io : https://daniel-work-gh.itch.io/shooter-game
+
 ## Controls 
 
 ### Player 1
